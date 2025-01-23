@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <title>Unsung Stars | Archive</title>
+<style>
+       body {
+           background-image: url(img/BackgroundPattern.png);
+           background-repeat: repeat-y;
+       }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <div class="writeHeader"></div>
+
+
+    <div class="archivePage subPage" align="center">
+        <div class="subPage clearfix">
+            <b></b>
+        <h1>Archive</h1>
+        <script>
+        indexPage = "index.html" //set which html page your comics are on, supremely important. archive system will break otherwise
+        </script>
+        
+        <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('chrono')"> Earliest First</button>
+  <button class="btn" onclick="filterSelection('lastfirst')"> Latest First</button>
+</div>
+    
+        <div class="filterDiv chrono">
+        <div class="chrono">
+            <h2>Earliest First</h2>
+        </div>
+        </div>
+
+        <div class="filterDiv lastfirst">
+        <div class="lastfirst">
+            <h2>Latest First</h2>
+        </div> 
+        </div>
+
+    
+        </div>
+    </div>
+    
+    <script> 
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}          
+</script>         
+
+
+    <!-- footer-->
+    <div class="writeFooter"></div>
+
+<!-- really important- every js script is called here, be sure to always put them just before the closing body tag, use a defer attribute, and call them in this specific order.-->
+<script src="js/comic_header.js" defer></script>
+<script src="js/comic_settings.js" defer></script>
+<script src="js/comic_archive.js" defer></script>
+<script src="js/comic_footer.js" defer></script>
+</body>
+</html>

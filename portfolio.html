@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eris Thijs | Portfolio</title>
+    <link href="css/style.css" rel="stylesheet" />
+      <style>
+       body {
+           background-image: url(img/BackgroundPattern.png);
+           background-repeat: repeat-y;
+       }
+    </style>
+  </head>
+  <body>
+      <div align="center">
+    <!-- header that has the logo image and top page navigation. don't forget to put this on every page -->
+    <div class="writeHeader"> 
+        <p></p>
+          </div>
+          
+          
+<div class="subPage clearfix">
+<h1 class="title">Portfolio</h1>
+        <p>Take a Look at my Portfolio!</p>
+    
+    
+    <!-- Control buttons -->
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> All</button>
+  <button class="btn" onclick="filterSelection('stars')"> Unsung Stars</button>
+    <button class="btn" onclick="filterSelection('other')"> Other</button>
+  <button class="btn" onclick="filterSelection('illustration')"> Illustration</button>
+  <button class="btn" onclick="filterSelection('studies')"> Studies</button>
+</div>
+    
+    
+<div class="photo-gallery">
+<div class="row">
+    <div class="column">
+        <div class="photo">
+            <div class="filterDiv stars illustration">
+        <img src="img/portfolio/thefall.png" alt="The Fall" onclick="openModal();currentSlide(1);">
+                </div>
+            </div>
+        <div class="photo">
+            <div class="filterDiv stars">
+        <img src="img/portfolio/sheet14jules.png" alt="Character Sheet Jules" onclick="openModal();currentSlide(5)">
+            </div>
+        </div>
+         <div class="photo">
+            <div class="filterDiv stars studies illustration">
+        <img src="img/portfolio/sevenriver.png" alt="River Portrait" onclick="openModal();currentSlide(9)">
+            </div>
+        </div>
+         <div class="photo">
+            <div class="filterDiv stars">
+        <img src="img/portfolio/sheet14lily.png" alt="Character Sheet Lily" onclick="openModal();currentSlide(13)">
+            </div>
+        </div>
+         <div class="photo">
+            <div class="filterDiv other">
+        <img src="img/portfolio/meettheartist23.jpg" alt="Meet The Artist 2023" onclick="openModal();currentSlide(17)">
+            </div>
+        </div>
+    
+    </div>
+    <div class="column">
+        <div class="photo">
+            <div class="filterDiv other">
+        <img src="img/portfolio/fearie.jpg" alt="Fearie" onclick="openModal();currentSlide(2)">
+            </div>
+        </div>
+    <div class="photo">
+        <div class="filterDiv stars illustration">
+        <img src="img/portfolio/stars.png" alt="Stars" onclick="openModal();currentSlide(6)"> 
+        </div> 
+        </div>
+    <div class="photo">
+        <div class="filterDiv stars illustration studies">
+        <img src="img/portfolio/aftermath.png" alt="Aftermath" onclick="openModal();currentSlide(10)"> 
+        </div> 
+        </div>
+    <div class="photo">
+        <div class="filterDiv stars">
+        <img src="img/portfolio/sheet14grace.png" alt="Character Sheet Grace" onclick="openModal();currentSlide(14)"> 
+        </div> 
+        </div>
+    </div>
+    
+    <div class="column">
+        <div class="photo">
+            <div class="filterDiv stars">
+        <img src="img/portfolio/sheet14river.png" alt="Character Sheet River" onclick="openModal();currentSlide(3)">
+            </div> </div>
+        <div class="photo">
+        <div class="filterDiv stars">
+        <img src="img/portfolio/riverwings.png" alt="Spread Your Wings" onclick="openModal();currentSlide(7)"> 
+        </div> 
+        </div>
+    <div class="photo">
+        <div class="filterDiv other illustration">
+        <img src="img/portfolio/cyborg1.jpg" alt="Cyborg" onclick="openModal();currentSlide(11)"> 
+        </div> 
+        </div>
+    <div class="photo">
+        <div class="filterDiv other">
+        <img src="img/portfolio/meettheartist24.png" alt="Meet The Artist 2024" onclick="openModal();currentSlide(15)"> 
+        </div> 
+        </div>
+    <div class="photo">
+        <div class="filterDiv studies other">
+        <img src="img/portfolio/modeltekenen2.jpeg" alt="Figure Drawing Black and White" onclick="openModal();currentSlide(18)"> 
+        </div> 
+        </div>
+    </div>
+    
+    <div class="column">
+        <div class="photo">
+            <div class="filterDiv illustration">
+    <img src="img/portfolio/melody.png" alt="Melody" onclick="openModal();currentSlide(4)">
+            </div> 
+        </div>
+        <div class="photo">
+            <div class="filterDiv stars">
+    <img src="img/portfolio/alateriver.jpg" alt="River Portrait" onclick="openModal();currentSlide(8)">
+            </div> 
+        </div>
+    <div class="photo">
+        <div class="filterDiv stars illustration">
+        <img src="img/portfolio/thorns.jpg" alt="The Thorns" onclick="openModal();currentSlide(12)"> 
+        </div> 
+        </div>
+    <div class="photo">
+        <div class="filterDiv studies other">
+        <img src="img/portfolio/modeltekenen1.jpeg" alt="Figure Drawing Black and White" onclick="openModal();currentSlide(16)"> 
+        </div> 
+        </div>
+    </div>              
+ <!-- Images used to open the lightbox -->
+<div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div class="mySlides">
+            <div class="numbertext">1 / 18</div>
+            <img src="img/portfolio/thefall.png" style="width: 40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 18</div>
+            <img src="img/portfolio/fearie.jpg" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 18</div>
+            <img src="img/portfolio/sheet14river.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 18</div>
+            <img src="img/portfolio/melody.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 18</div>
+            <img src="img/portfolio/sheet14jules.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">6 / 18</div>
+            <img src="img/portfolio/stars.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">7 / 18</div>
+            <img src="img/portfolio/riverwings.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">8 / 18</div>
+            <img src="img/portfolio/alateriver.jpg" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">9 / 18</div>
+            <img src="img/portfolio/sevenriver.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">10 / 18</div>
+            <img src="img/portfolio/aftermath.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">11 / 18</div>
+            <img src="img/portfolio/cyborg1.jpg" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">12 / 18</div>
+            <img src="img/portfolio/thorns.jpg" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">13 / 18</div>
+            <img src="img/portfolio/sheet14lily.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">14 / 18</div>
+            <img src="img/portfolio/sheet14grace.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">15 / 18</div>
+            <img src="img/portfolio/meettheartist24.png" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">16 / 18</div>
+            <img src="img/portfolio/modeltekenen1.jpeg" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">17 / 18</div>
+            <img src="img/portfolio/meettheartist23.jpg" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">18 / 18</div>
+            <img src="img/portfolio/modeltekenen1.jpeg" style="width:40%">
+        </div>
+    </div>
+<!-- next/previous controls -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
+<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+        
+<!-- caption text -->
+<div class="caption-container">
+        <p id="caption"></p>
+        </div>        
+<div class="row"><!-- caption text -->
+<div class="democolumn">
+    <img class="demo" src="img/portfolio/thefall.png" onclick="currentSlide(1)" alt="The Fall">
+        </div>
+<div class="democolumn">
+        <img class="demo" src="img/portfolio/fearie.jpg" onclick="currentSlide(2)" alt="Fearie">
+        </div>
+<div class="democolumn">
+        <img class="demo" src="img/portfolio/sheet14river.png" onclick="currentSlide(3)" alt="Character Sheet River">
+        </div>
+<div class="democolumn">
+        <img class="demo" src="img/portfolio/melody.png" onclick="currentSlide(4)" alt="Melody">
+        </div>
+<div class="democolumn">
+        <img class="demo" src="img/portfolio/sheet14jules.png" onclick="currentSlide(5)" alt="Character Sheet Jules">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/stars.png" onclick="currentSlide(6)" alt="Stars">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/riverwings.png" onclick="currentSlide(7)" alt="Spread Your Wings">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/alateriver.jpg" onclick="currentSlide(8)" alt="River Portrait">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/sevenriver.png" onclick="currentSlide(9)" alt="River Portrait">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/aftermath.png" onclick="currentSlide(10)" alt="Aftermath">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/cyborg1.jpg" onclick="currentSlide(11)" alt="Cyborg">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/thorns.jpg" onclick="currentSlide(12)" alt="The Thorns">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/sheet14lily.png" onclick="currentSlide(13)" alt="Character Sheet Lily">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/sheet14grace.png" onclick="currentSlide(14)" alt="Character Sheet Grace">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/meettheartist24.png" onclick="currentSlide(15)" alt="Meet The Artist 2024">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/modeltekenen1.jpeg" onclick="currentSlide(16)" alt="Figure Drawing Black and White">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/meettheartist23.jpg" onclick="currentSlide(17)" alt="Meet The Artist 2023">
+        </div>
+    <div class="democolumn">
+        <img class="demo" src="img/portfolio/modeltekenen2.jpeg" onclick="currentSlide(18)" alt="Figure Drawing Black and White">
+        </div>
+    </div>
+    </div>
+</div>
+    </div>
+          
+  <script> 
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}          
+</script>         
+
+ <script>
+    
+    // open the modal
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+// close the modal
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+//next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n>slides.length) {slideIndex = 1}
+    if (n<1) {slideIndex = slides.length}
+    for (i = 0; i< slides.length; i++) {slides[i].style.display = "none";}
+    for (i = 0; i<dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</div>     
+        
+<div class="writeFooter"></div>
+        
+<script src="js/portfolio_gallery.js" defer></script>
+ <!-- really important- every js script is called here, be sure to always put them just before the closing body tag, use a defer attribute, and call them in this specific order.-->
+    <script src="js/comic_settings.js" defer></script>
+    <script src="js/comic_show.js" defer></script>
+    <script src="js/comic_header.js" defer></script>
+    <script src="js/comic_footer.js" defer></script>
+          
+  </body>
+</html>

@@ -1,0 +1,75 @@
+main {
+    background-image:url(../img/HeroPage3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 40vh;
+    overflow: hidden;
+    max-width: 98%;
+}
+
+
+main .main-intro, main .main-quotes{
+    display: contents;
+} 
+
+main .main-intro h6{
+    color: var(--site-color-green);
+    font-size: 96px;
+    line-height: 100px;
+    margin-bottom: 0px;
+    margin-top: 80px;
+}
+
+main .main-intro h3{
+    color: var(--site-color-darkgreen);
+    font-size: 60px;
+        line-height: 65px;
+    margin-top: 0;
+}
+
+main .main-intro p, main .main-quotes{
+    margin-top: 20vh;
+}
+
+
+main .main-quotes p{
+    margin-top: 10vh
+}
+
+main .main-intro p {
+    font-size: 18px;
+    line-height: 25px;
+    display: block;
+    background-color: var(--site-color-lightp);
+    width: 40%;
+    padding: 10px 20px;
+    border-radius: 0.2rem;
+    margin-top: 40vh;
+}
+
+main .main-intro2 p {
+    font-size: 18px;
+    line-height: 25px;
+    display: block;
+    background-color: var(--site-color-lightp);
+    width: 40%;
+    padding: 10px 20px;
+    border-radius: 0.2rem;
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+}
+
+
+main .main-quotes p{
+    font-size: 18px;
+    line-height: 25px;
+    display: block;
+    background-color: var(--site-color-darkp);
+    width: 40%;
+    padding: 10px 20px;
+    border-radius: 0.2rem;
+}
+
+
+
